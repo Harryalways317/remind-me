@@ -27,7 +27,7 @@ class TasksScreen extends StatelessWidget {
                 CircleAvatar(child: Icon(Icons.list,size: 30,color: Colors.lightBlueAccent,),backgroundColor: Colors.white,radius: 30,),
                 SizedBox(height: 10,),
                 Text("Remind ME",style: TextStyle(fontSize: 50.0,color: Colors.white,fontWeight: FontWeight.w700),),
-                Text("${Provider.of<TasksData>(context).tasksList.length} Tasks",style: TextStyle(fontSize: 18,color: Colors.white),),
+                Text("${Provider.of<TasksData>(context).tasksBox.length} Tasks",style: TextStyle(fontSize: 18,color: Colors.white),),
 
 
               ],
