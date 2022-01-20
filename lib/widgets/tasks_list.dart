@@ -53,13 +53,14 @@ class TasksList extends StatelessWidget {
           itemBuilder: (context,index){
             final task = taskData.tasksBox.getAt(index);
             return Dismissible(
-              key: Key(task?.name ?? ""),
+              // key: Key(task?.name ?? ""),
+              key: UniqueKey(),
               onDismissed: (direction) {
                 // Remove the item from the data source.
                 // setState(() {
                 //   items.removeAt(index);
                 // });
-                taskData.deleteTasks(task!);
+                taskData.deleteTasks(task!,index);
 
                 // Then show a snackbar.
                 ScaffoldMessenger.of(context)
@@ -74,7 +75,7 @@ class TasksList extends StatelessWidget {
                   taskData.toggleTask(task!,index);
                 },
                 onLongPress: (){
-                  taskData.deleteTasks(task!);
+                  taskData.deleteTasks(task!,index);
                 },
 
               ),

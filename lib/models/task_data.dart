@@ -25,9 +25,10 @@ class TasksData extends ChangeNotifier{
     notifyListeners();
   }
 
-  deleteTasks(Task task){
+  deleteTasks(Task task,index){
     //tasksList.remove(task);
-    tasksBox.delete(task);
+    //tasksBox.delete(task);
+    tasksBox.deleteAt(index);
     notifyListeners();
   }
   
